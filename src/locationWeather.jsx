@@ -99,6 +99,7 @@ function LocationWeather({ location }) {
         };
 
         getWeather();
+        return () => clearTimeout(loadingIndicatorTimeout);
     }, [location]);
 
     const { flagIcon, countryCode } = React.useMemo(() => {
